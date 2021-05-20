@@ -62,10 +62,11 @@ eval $(starship init zsh)
 ### completions
 if type brew &>/dev/null; then
   fpath+=$HOME/.zfunc:$HOMEBREW_PREFIX/share/zsh/site-functions
+  PATH=$PATH:$HOMEBREW_PREFIX/opt/mysql-client/bin
 fi
-zstyle :compinstall filename $HOME/.zshrc
-autoload -Uz compinit
-compinit
+# zstyle :compinstall filename $HOME/.zshrc
+# autoload -Uz compinit
+# compinit
 
 ### syntax highlighting
 if [[ -d $HOMEBREW_PREFIX/share/zsh-syntax-highlighting ]]; then

@@ -51,6 +51,10 @@
   "files.watcherExclude": {
     "**/.venv/**": true
   },
+  "liveshare.allowGuestDebugControl": true,
+  "liveshare.audio.joinCallBehavior": "prompt",
+  "liveshare.autoShareServers": false,
+  "liveshare.autoShareTerminals": true,
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
@@ -195,7 +199,7 @@
     "**/zshrc": false
   },
   "shellformat.effectLanguages": ["shellscript"],
-  "shellformat.path": "/opt/homebrew/bin/shfmt",
+  "shellformat.path": "/usr/local/bin/shfmt",
   "[shellscript]": {
     "editor.rulers": [],
     "files.eol": "\n"
