@@ -29,6 +29,7 @@ brew "macos-trash" # macOS-only
 brew "mas" # macOS-only
 brew "mypy"
 brew "node"
+brew "neovim"
 brew "openssh"
 brew "pinentry"
 brew "pipx"
