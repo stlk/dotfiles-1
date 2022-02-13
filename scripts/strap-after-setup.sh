@@ -23,6 +23,12 @@ for i in {code,code-exploration,code-insiders,code-server,codium}; do
   "$HOME"/.dotfiles/scripts/vscode-extensions.sh "$i"
 done
 
+### Configure Neovim
+if command -v nvim &>/dev/null; then
+  git clone https://github.com/kabinspace/AstroVim ~/.config/nvim
+  nvim +PackerSync
+fi
+
 ### Set shell
 if ! [[ $SHELL =~ "zsh" ]] && command -v zsh &>/dev/null; then
   echo "--> Changing shell to Zsh. Password entry required."
