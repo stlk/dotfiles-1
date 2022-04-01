@@ -13,7 +13,7 @@ tap "homebrew/services"
 #brew "cookiecutter"
 #brew "deno" # macOS-only
 #brew "flake8"
-3brew "fx"
+#brew "fx"
 #brew "gh"
 brew "git"
 #brew "git-lfs"
