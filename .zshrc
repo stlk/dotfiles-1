@@ -41,12 +41,6 @@ eval $($HOMEBREW_PREFIX/bin/brew shellenv)
 ### exports
 if command -v code &>/dev/null; then
   editor='code --wait'
-elif command -v code-insiders &>/dev/null; then
-  editor='code-insiders --wait'
-elif command -v code-exploration &>/dev/null; then
-  editor='code-exploration --wait'
-elif command -v codium &>/dev/null; then
-  editor='codium --wait'
 else
   editor='vim'
 fi

@@ -18,11 +18,6 @@ else
   echo "Skipping Poetry install."
 fi
 
-### Install VSCode extensions
-for i in {code,code-exploration,code-insiders,code-server,codium}; do
-  "$HOME"/.dotfiles/scripts/vscode-extensions.sh "$i"
-done
-
 ### Set shell
 if ! [[ $SHELL =~ "zsh" ]] && command -v zsh &>/dev/null; then
   echo "--> Changing shell to Zsh. Password entry required."

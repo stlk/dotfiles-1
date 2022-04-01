@@ -10,10 +10,10 @@ defaults read >~/Desktop/macos-defaults.txt
 ###############################################################################
 
 # Enable dark mode
-defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
-defaults write NSGlobalDomain AppleAccentColor -string "-1"
-defaults write NSGlobalDomain AppleHighlightColor -string \
-  "0.847059 0.847059 0.862745 Graphite"
+#defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
+#defaults write NSGlobalDomain AppleAccentColor -string "-1"
+#defaults write NSGlobalDomain AppleHighlightColor -string \
+#  "0.847059 0.847059 0.862745 Graphite"
 
 # Use metric units
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
