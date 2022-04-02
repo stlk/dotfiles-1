@@ -72,6 +72,9 @@ cask "visual-studio-code"
 #cask "visual-studio-code-insiders"
 cask "vlc"
 #cask "zotero" # no arm64_big_sur yet
+cask "slack"
+cask "homebrew/cask/hey"
+cask "spotify"
 
 ### casks for work
 # cask "datagrip"

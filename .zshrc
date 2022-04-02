@@ -10,20 +10,20 @@ HISTSIZE=10000
 setopt autocd extendedglob globdots histignorespace noautomenu nullglob
 
 ### keybindings: based on https://github.com/romkatv/zsh4humans
-bindkey -e
-bindkey -s '^[[1~' '^[[H'
-bindkey -s '^[[4~' '^[[F'
-bindkey -s '^[[5~' ''
-bindkey -s '^[[6~' ''
-bindkey '^[[H' beginning-of-line
-bindkey '^[[F' end-of-line
-bindkey '^?' backward-delete-char
-bindkey '^[[3~' delete-char
-bindkey '^[[1;3C' forward-word
-bindkey '^[[1;3D' backward-word
-bindkey '^H' backward-kill-word
-bindkey '^[[3;3~' kill-word
-bindkey '^N' kill-buffer
+# bindkey -e
+# bindkey -s '^[[1~' '^[[H'
+# bindkey -s '^[[4~' '^[[F'
+# bindkey -s '^[[5~' ''
+# bindkey -s '^[[6~' ''
+# bindkey '^[[H' beginning-of-line
+# bindkey '^[[F' end-of-line
+# bindkey '^?' backward-delete-char
+# bindkey '^[[3~' delete-char
+# bindkey '^[[1;3C' forward-word
+# bindkey '^[[1;3D' backward-word
+# bindkey '^H' backward-kill-word
+# bindkey '^[[3;3~' kill-word
+# bindkey '^N' kill-buffer
 
 ### homebrew
 [[ -z $HOMEBREW_PREFIX ]] && case $(uname) in
@@ -47,9 +47,6 @@ fi
 TTY=$(tty)
 export EDITOR=$editor GIT_EDITOR=$editor GPG_TTY=$TTY PATH=$HOME/.local/bin:$PATH
 
-### aliases
-alias python='python3'
-
 ### prompt: https://starship.rs
 eval $(starship init zsh)
 
@@ -67,3 +64,10 @@ if [[ -d $HOMEBREW_PREFIX/share/zsh-syntax-highlighting ]]; then
 elif [[ -d $HOME/.zsh/zsh-syntax-highlighting ]]; then
   . $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
+
+alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
+
+eval "$(pyenv init -)"
+
+source ~/.aliases.zsh
+source ~/.functions.zsh

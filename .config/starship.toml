@@ -10,3 +10,6 @@ unknown_indicator = "??? "
 style = "cyan bold"
 format = "[$indicator]($style)"
 disabled = false
+
+[nodejs]
+symbol = "nodejs "
